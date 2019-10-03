@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "name": "chairs",
+      "quantity": "2",
+      "type": "Meat",
+      "importance": true,
+      "id": 1
+    }
+  ]
+}
