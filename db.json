@@ -1,3 +1,18 @@
 {
-  "items": []
+  "items": [
+    {
+      "name": "Tomatos",
+      "quantity": "2",
+      "type": "Fruit",
+      "importance": false,
+      "id": 1
+    },
+    {
+      "name": "Peanut butter",
+      "quantity": "1",
+      "type": "Carbohydrates",
+      "importance": false,
+      "id": 2
+    }
+  ]
 }

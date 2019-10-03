@@ -2,8 +2,10 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios'
 import ShoppingList from './components/ShoppingList'
 import ShoppingListForm from './components/ShoppingListForm'
+import { Header, Container } from 'semantic-ui-react'
 
 function App() {
+
   const [items, setItems] = useState([])
   const [name, setName] =useState("")
   const [quantity, setQuantity] =useState("")
@@ -63,25 +65,29 @@ function App() {
     console.log("type", type)
   }
 
+  const containerStyle = {
+    display: "flex"
+  }
+  
   return (
     <div>
-      <div className="header">
-        <h1>My shopping list</h1>
-      </div>
-      <ShoppingList 
-      items={items}
-      toggleImportance={toggleImportance}
-      deleteItem={deleteItem}
-      />
-      <ShoppingListForm
-      addItem={addItem}
-      handleNameChange={handleNameChange}
-      handleQuantityChange={handleQuantityChange}
-      handleTypeChange={handleTypeChange}
-      name={name}
-      quantity={quantity}
-      type={type}
-      />
+      <Header as='h3' block color='orange' textAlign='center'>My ShoppingList</Header>
+      <Container style={containerStyle}>
+        <ShoppingList 
+        items={items}
+        toggleImportance={toggleImportance}
+        deleteItem={deleteItem}
+        />
+        <ShoppingListForm
+        addItem={addItem}
+        handleNameChange={handleNameChange}
+        handleQuantityChange={handleQuantityChange}
+        handleTypeChange={handleTypeChange}
+        name={name}
+        quantity={quantity}
+        type={type}
+        />
+      </Container>
     </div>
   );
 }

@@ -1,8 +1,13 @@
 import React from 'react';
 
 const ShoppingListForm = ({addItem, name, quantity, type, handleNameChange, handleQuantityChange, handleTypeChange}) => {
+    
+    const style = {
+        width: "50%"
+    }
+
     return (
-        <div>
+        <div style={style}>
             <h1>Add to my list</h1>
             <form onSubmit={addItem}>
             <div>
@@ -10,11 +15,11 @@ const ShoppingListForm = ({addItem, name, quantity, type, handleNameChange, hand
                 <input value={name} onChange={handleNameChange}/>
             </div>
             <div>
-                quantity
+                Quantity
                 <input value={quantity} onChange={handleQuantityChange}/>
             </div>
             <div>
-                type
+                Type
                 <select name="type" onChange={handleTypeChange} value={type}>
                 <option value="Vegetables">Vegetables</option>
                 <option value="Fruit">Fruit</option>
